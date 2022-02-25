@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
-import { Box, Rating, Typography } from "@mui/material";
+import { Box, Rating } from "@mui/material";
 
-export default function BasicRating() {
+export default function BasicRating({ rating }) {
   const [value, setValue] = useState(0);
 
   return (
@@ -10,13 +10,13 @@ export default function BasicRating() {
         "& > legend": { mt: 0 },
       }}
     >
-      <Typography component="legend">Rate this Restaurant</Typography>
       <Rating
         name="simple-controlled"
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
+        value={rating}
+        precision={0.5}
+        // onChange={(event, newValue) => {
+        //   setValue(newValue);
+        // }}
       />
     </Box>
   );

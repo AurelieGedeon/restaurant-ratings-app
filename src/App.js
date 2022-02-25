@@ -8,7 +8,6 @@ function App() {
     <>
       <h1>Restaurants</h1>
       <Restaurants />
-      <BasicRating />
     </>
   );
 }

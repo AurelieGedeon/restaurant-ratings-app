@@ -25,8 +25,7 @@ export default function GetRestaurants() {
                   <h2>{restaurant.name}</h2>
                   <img src={restaurant.photoUrl} />
                   <h2>
-                    {restaurant.rating}
-                    <BasicRating />
+                    <BasicRating rating={restaurant.rating} />
                   </h2>
                 </li>
               );
