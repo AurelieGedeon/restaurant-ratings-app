@@ -1,7 +1,6 @@
 import React from "react";
 import Restaurants from "./components/Restaurants";
 import "./App.css";
-import BasicRating from "./components/Ratings";
 
 function App() {
   return (

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { List } from "@mui/material";
 import BasicRating from "./Ratings";
 
 export default function GetRestaurants() {
@@ -25,7 +24,11 @@ export default function GetRestaurants() {
                   <h2>{restaurant.name}</h2>
                   <img src={restaurant.photoUrl} />
                   <h2>
-                    <BasicRating rating={restaurant.rating} />
+                    <BasicRating
+                      rating={restaurant.rating}
+                      id={restaurant.id}
+                      setRestaurants={setRestaurants}
+                    />
                   </h2>
                 </li>
               );
