@@ -11,9 +11,7 @@ export default function BasicRating({ rating, id, setRestaurants }) {
     })
       .then((res) => res.json())
       .then((data) => setRestaurants(data))
-      .catch((err) => {
-        alert(err);
-      });
+      .catch((err) => alert(err));
   };
 
   return (

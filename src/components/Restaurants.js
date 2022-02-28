@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BasicRating from "./Ratings";
+import RestaurantCard from "./RestaurantCard";
 
 export default function GetRestaurants() {
   const [restaurants, setRestaurants] = useState([]);
@@ -21,6 +22,7 @@ export default function GetRestaurants() {
             {restaurants.map((restaurant) => {
               return (
                 <li>
+                  <RestaurantCard />
                   <h2>{restaurant.name}</h2>
                   <img src={restaurant.photoUrl} />
                   <h2>
@@ -28,6 +30,9 @@ export default function GetRestaurants() {
                       rating={restaurant.rating}
                       id={restaurant.id}
                       setRestaurants={setRestaurants}
+                      photoUrl={restaurant.photoUrl}
+                      name={restaurant.name}
+                      restaurant={restaurants}
                     />
                   </h2>
                 </li>
