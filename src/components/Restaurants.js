@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import BasicRating from "./Ratings";
 import RestaurantCard from "./RestaurantCard";
 
 export default function GetRestaurants() {
@@ -22,17 +21,9 @@ export default function GetRestaurants() {
             return (
               <>
                 <RestaurantCard
-                  BasicRating={BasicRating}
-                  photoUrl={restaurant.photoUrl}
-                  name={restaurant.name}
-                />
-                {/* <BasicRating
-                  rating={restaurant.rating}
-                  id={restaurant.id}
+                  restaurant={restaurant}
                   setRestaurants={setRestaurants}
-                  photoUrl={restaurant.photoUrl}
-                  name={restaurant.name}
-                /> */}
+                />
               </>
             );
           })}
