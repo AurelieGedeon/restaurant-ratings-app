@@ -18,27 +18,24 @@ export default function GetRestaurants() {
         <h2>Loading</h2>
       ) : (
         <>
-          <ul>
-            {restaurants.map((restaurant) => {
-              return (
-                <li>
-                  <RestaurantCard />
-                  <h2>{restaurant.name}</h2>
-                  <img src={restaurant.photoUrl} />
-                  <h2>
-                    <BasicRating
-                      rating={restaurant.rating}
-                      id={restaurant.id}
-                      setRestaurants={setRestaurants}
-                      photoUrl={restaurant.photoUrl}
-                      name={restaurant.name}
-                      restaurant={restaurants}
-                    />
-                  </h2>
-                </li>
-              );
-            })}
-          </ul>
+          {restaurants.map((restaurant) => {
+            return (
+              <>
+                <RestaurantCard
+                  BasicRating={BasicRating}
+                  photoUrl={restaurant.photoUrl}
+                  name={restaurant.name}
+                />
+                {/* <BasicRating
+                  rating={restaurant.rating}
+                  id={restaurant.id}
+                  setRestaurants={setRestaurants}
+                  photoUrl={restaurant.photoUrl}
+                  name={restaurant.name}
+                /> */}
+              </>
+            );
+          })}
         </>
       )}
     </>

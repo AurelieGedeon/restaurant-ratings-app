@@ -1,12 +1,13 @@
-import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  CardActionArea,
+} from "@mui/material";
 import BasicRating from "./Ratings";
 
-export default function RestaurantCard({ name, photoUrl }) {
+export default function RestaurantCard({ name, photoUrl, restaurant }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -14,7 +15,7 @@ export default function RestaurantCard({ name, photoUrl }) {
           component="img"
           height="140"
           image={photoUrl}
-          alt="green iguana"
+          alt="Restaurant photo"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
